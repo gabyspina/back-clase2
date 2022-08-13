@@ -7,8 +7,9 @@
     const encuesta = new Encuesta(questionArray);
     const ui = new UI();
 
-      ui.showQuestion('pregunta'); 
+      ui.showQuestion(encuesta.getCurrentQuestion().question); 
 
     console.log( 'consulta', encuesta)
  }
+
 main()
