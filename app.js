@@ -3,13 +3,19 @@
    import { UI } from "./models/UI.js";
 
    const renderPage  = (ui, encuesta) => {
+      if (encuesta.isEnded()) { 
+         ui.showResult();
       
-      ui.showQuestion(encuesta.getCurrentQuestion().question); 
-      ui.showChoices(encuesta.getCurrentQuestion().choices, (currentChoice) => {
-         encuesta.validarRespuesta(currentChoice);         
-         console.log( 'consulta', encuesta)
-         renderPage(ui, encuesta);
-      });
+        } else {
+
+         ui.showQuestion(encuesta.getCurrentQuestion().question); 
+         ui.showChoices(encuesta.getCurrentQuestion().choices, (currentChoice) => {
+            encuesta.validarRespuesta(currentChoice);         
+            console.log( 'consulta', encuesta)
+            renderPage(ui, encuesta);  
+         });
+      }
+      
 
    }
 

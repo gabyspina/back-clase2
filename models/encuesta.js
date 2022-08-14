@@ -9,7 +9,7 @@ export class Encuesta {
 
         return this.questions[this.questionIndex]; 
     } 
-
+     
     // validateAndContinue
     validarRespuesta (choice) {
         
@@ -18,6 +18,6 @@ export class Encuesta {
     }
 
     isEnded () {
-        return this.question,lenght === this.questionIndex;
+        return this.questions.length === this.questionIndex;
     }    
 }
