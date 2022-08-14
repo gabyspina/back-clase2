@@ -1,6 +1,7 @@
 export class Encuesta {
     constructor(questions) {
         this.questions = questions;
+        this.clasificacion = [];
         this.questionIndex  = 0;
     }   
 
@@ -10,7 +11,9 @@ export class Encuesta {
     } 
 
     // validateAndContinue
-    validarRespuesta () {
+    validarRespuesta (choice) {
+        
+        console.log('answer', choice);
         this.questionIndex++;
     }
 
