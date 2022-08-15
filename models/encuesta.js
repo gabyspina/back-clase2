@@ -1,3 +1,4 @@
+
 export class Encuesta {
     constructor(questions) {
         this.questions = questions;

@@ -23,8 +23,8 @@ console.log('pregunta',resultado)
             button.setAttribute('class', 'button');
             button.addEventListener('click', () => callback(choices [i]));
             choicesContainer.append(button);
-            
-            
+                
+
         }
     }
 
